@@ -1,59 +1,141 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .App {
-    text-align: center;
-  }
-  
-  .login {
-    margin-top: 50px;
-  }
-  
-  .chat {
-    margin: 20px auto;
-    max-width: 600px;
-    text-align: left;
-  }
-  
-  .messages {
-    border: 1px solid #ddd;
-    height: 300px;
-    overflow-y: scroll;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .message {
-    margin-bottom: 10px;
-  }
-  
-  .message strong {
-    color: #007bff;
-  }
-  
-  .input-box {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  input[type='text'] {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-  }
-  
-  button {
-    padding: 10px 20px;
-    border: none;
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: #0056b3;
-  }
-  
+  background-color: #121212;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Chat Container */
+.chat-container {
+  width: 100%;
+  max-width: 500px;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Login Box */
+.login-box {
+  text-align: center;
+}
+
+.login-box input {
+  width: 90%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.login-box button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-box button:hover {
+  background: #0056b3;
+}
+
+/* Chat Box */
+.chat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Messages Container */
+.messages-container {
+  height: 350px;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding: 10px;
+  background: #252525;
+  display: flex;
+  flex-direction: column; /* Ensures messages appear one below another */
+}
+
+/* Message Bubbles */
+.message-bubble {
+  max-width: 75%;
+  padding: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* Sent Messages (Owner) */
+.sent {
+  background-color: #007bff;
+  color: white;
+  text-align: right;
+  align-self: flex-end; /* Align to the right */
+  border-radius: 10px 10px 0px 10px;
+}
+
+/* Received Messages (Others) */
+.received {
+  background-color: #444;
+  color: white;
+  text-align: left;
+  align-self: flex-start; /* Align to the left */
+  border-radius: 10px 10px 10px 0px;
+}
+
+/* Username */
+.username {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+}
+
+/* Timestamp */
+.timestamp {
+  font-size: 12px;
+  display: block;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+.input-container input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.input-container button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background: #218838;
+}
